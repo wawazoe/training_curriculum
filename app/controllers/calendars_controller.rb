@@ -22,7 +22,12 @@ class CalendarsController < ApplicationController
   end
 
   def getWeek
+    wday_num = ''
+    if 
+    wday_num = wday_num -7
     wdays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
+    days = { :days => (@week_days + x).day, :date => (@todays_date+x).day, :plans => today_plans}
+    end
 
     # Dateオブジェクトは、日付を保持しています。下記のように`.today.day`とすると、今日の日付を取得できます。
     @todays_date = Date.today
